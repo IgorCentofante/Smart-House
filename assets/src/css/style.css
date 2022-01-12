@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300&family=Noto+Sans:wght@400;700&family=Open+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300&family=Mukta:wght@200&family=Noto+Sans:wght@400;700&family=Open+Sans:wght@300&family=Quicksand:wght@300&family=Raleway:wght@100&family=Work+Sans:wght@100&display=swap');
+
+/*Header*/
+:root {
+    --color-background: #2C0558;
+    --color-primary: rgb(4, 20, 44);
+    --color-secondary: #012647;
+    --color-tertiary : rgb(19, 159, 231);
+    --color: #ffffff;
+    --color-border: #20202075;
+}
+header{
+    width: 100%;;
+    height: 100%;
+    background-color: var(--color-background);
+    background-position: center;
+}
+header .navBar{
+    position: fixed;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header .navBar li{
+     display: inline-block;
+}
+header .navBar a{
+    text-decoration: none;
+    color: var(--color);
+    margin: 2vh;
+    padding: 8px 12px;
+    border-radius: 3px;
+    transition: 200ms;
+}
+header .navBar .ativo, header .navBar a:hover{
+    color: var(--color-primary);
+    background-color: white;
+}
+.conteudo-header{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Esquerda*/
+.container-esquerdo{
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.titulo-container-esquerdo{
+    color: var(--color);
+    font-size: 50px;
+    font-family: 'Noto Sans', sans-serif;
+}
+.subtitulo-container-esquerdo{
+    color: rgba(175, 175, 175, 0.856);
+    font-size: 20px;
+}
+.texto-container-esquerdo{
+    font-family: 'Quicksand', sans-serif;
+    color: var(--color);
+    font-size: 16px;
+    margin: 5% 3% 1% 3%;
+    text-align: justify; 
+}    
+.btn-header{
+    display: block;
+    width: 7em;
+    height: auto;
+    font-size: 15px;
+    color: var(--color);
+    margin: 10%;
+    padding: 10px;
+    border: black;
+    border-radius: 15px;
+    background-image: linear-gradient(90deg, rgba(102,39,199,255), 
+    rgb(79, 221, 250));
+}
+.btn-header:hover{
+    cursor: pointer;
+    border-color: white;
+    animation: mexidinha 0.5s alternate;
+}
+
+@keyframes mexidinha{
+    0%{
+        transform: translateX(0%);
+    }
+    20%{
+        transform: translateX(-4%);
+    }
+    40%{
+        transform: translateX(4%);
+    }
+    60%{
+        transform: translateX(-4%);
+    }
+    80%{
+        transform: translateX(4%);
+    }
+    100%{
+        transform: translateX(0%);
+    }
+}
+
+/*Direita*/
+.container-direito{
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo-menu{
+    width: 70vh;
+    transform: translateY(0px);
+    animation: flutuar 3s ease-in-out infinite;
+}
+@keyframes flutuar {
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(-8px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+
+/*Responsividade*/
+@media only screen and (max-width: 600px){
+    .navBar a{
+        display: none;
+    }
+    .conteudo-header{
+        flex-direction: column;
+    }
+    .container-esquerdo{
+        justify-content: flex-start;
+        margin: 5em 0 0 0;
+        width: 100%;
+        right: auto;
+    }
+    .texto-container-esquerdo{
+        margin: 3em 1em 1em 1em;
+        font-size: 13px;
+    }
+    .btn-header{
+        margin: 3em 0 0 0;
+    }
+    .logo-menu{
+        width: 85vw;
+    }
+}
