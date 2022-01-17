@@ -3,9 +3,9 @@
 
 /*Header*/
 :root {
-    --color-background: #2C0558;
-    --color-primary: rgb(4, 20, 44);
-    --color-secondary: #012647;
+    --color-background: #410b74;
+    --color-primary: rgb(26, 4, 44);
+    --color-secondary: #644e84;
     --color-tertiary : rgb(19, 159, 231);
     --color: #ffffff;
     --color-border: #20202075;
@@ -37,6 +37,9 @@ header .navBar a{
 header .navBar .ativo, header .navBar a:hover{
     color: var(--color-primary);
     background-color: white;
+}
+.sideBarIcon{
+    color: white;
 }
 .conteudo-header{
     width: 100vw;
@@ -137,7 +140,16 @@ header .navBar .ativo, header .navBar a:hover{
 }
 
 /*Responsividade*/
+#btn-mobile{
+    display: none;
+}
 @media only screen and (max-width: 600px){
+    html, body {
+        overflow-x: hidden;
+    }
+    nav{
+        height: 4em;
+    }
     .navBar a{
         display: none;
     }
@@ -146,7 +158,7 @@ header .navBar .ativo, header .navBar a:hover{
     }
     .container-esquerdo{
         justify-content: flex-start;
-        margin: 5em 0 0 0;
+        margin: 3em 0 0 0;
         width: 100%;
         right: auto;
     }
@@ -155,9 +167,17 @@ header .navBar .ativo, header .navBar a:hover{
         font-size: 13px;
     }
     .btn-header{
-        margin: 3em 0 0 0;
+        margin: 1em 0em 0em 0em;
     }
     .logo-menu{
         width: 85vw;
+    }
+}
+@media (max-width: 600px){
+    #btn-mobile{
+        display: block;
+    }
+    a #nav.active #menu{
+        display: flex;
     }
 }
