@@ -13,6 +13,7 @@
 }
 body{
     background-color: var(--color-background);
+    overflow-x: hidden;
 }
 header{
     width: 100%;
@@ -214,7 +215,7 @@ header .navBar a:hover::after{
     }
     .texto-container-esquerdo{
         margin: 3em 1em 1em 1em;
-        font-size: 13px;
+        font-size: 1em;
     }
     .btn-header{
         margin: 1em 0em 0em 0em;
