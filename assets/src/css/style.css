@@ -16,17 +16,22 @@ body{
     overflow-x: hidden;
 }
 header{
+    display: flex;
     width: 100%;
-    height: 100%;
+    padding: 10px 20px;
+    position: fixed;
     background-color: var(--color-background);
     background-position: center;
-}
-header .navBar{
-    position: fixed;
-    width: 100%;
-    display: flex;
     align-items: center;
     justify-content: space-between;
+    z-index: 999;
+}
+.navBar{
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: end;
 }
 header .navBar li{
     display: inline-block;
@@ -35,6 +40,7 @@ header .navBar a{
     text-decoration: none;
     font-size: 26px;
     color: var(--color);
+    justify-content: space-between;
     margin: 2vh;
     padding: 8px 12px;
     border-radius: 3px;
@@ -48,9 +54,6 @@ header .navBar a:hover::after{
     position: absolute;
     height: 3px;
     width: 7.2rem;
-}
-.sideBarIcon{
-    color: white;
 }
 .conteudo-header{
     width: 100vw;
@@ -71,7 +74,7 @@ header .navBar a:hover::after{
 }
 .titulo-container-esquerdo{
     color: var(--color-primary);
-    font-size: 55px;
+    font-size: 4rem;
     font-family: var(--font-family);
 }
 .subtitulo-container-esquerdo{
@@ -81,7 +84,7 @@ header .navBar a:hover::after{
 .texto-container-esquerdo{
     font-family: var(--font-family);
     color: var(--color);
-    font-size: 18px;
+    font-size: 1.2rem;
     margin: 5% 5% 1% 5%;
     text-align: center; 
 }    
@@ -94,14 +97,12 @@ header .navBar a:hover::after{
     color: var(--color);
     margin: 10%;
     padding: 10px;
-    border: black;
     border-radius: 15px;
     background-image: linear-gradient(90deg, rgba(102,39,199,255), 
     rgb(79, 221, 250));
 }
 .btn-header:hover{
     cursor: pointer;
-    border-color: white;
     animation: mexidinha 0.5s alternate;
 }
 
@@ -195,14 +196,14 @@ header .navBar a:hover::after{
     }
 }
 @media only screen and (max-width: 600px){
-    html, body {
-        overflow-x: hidden;
-    }
     nav{
-        height: 4em;
+        height: 2em;
     }
     .navBar a{
         display: none;
+    }
+    .titulo-container-esquerdo{
+        font-size: 3rem;
     }
     .conteudo-header{
         flex-direction: column;
@@ -215,7 +216,8 @@ header .navBar a:hover::after{
     }
     .texto-container-esquerdo{
         margin: 3em 1em 1em 1em;
-        font-size: 1em;
+        font-size: 0.8rem;
+        text-align: center;
     }
     .btn-header{
         margin: 1em 0em 0em 0em;
@@ -225,10 +227,50 @@ header .navBar a:hover::after{
     }
 }
 @media (max-width: 600px){
+    header{
+        display: block;
+        align-self: start;
+    }
     #btn-mobile{
         display: block;
+        width: 50px;
+        height: 50px;
+        background-color: var(--color-background);
+        border-radius: 10%;
+        position: relative;
     }
-    a #nav.active #menu{
-        display: flex;
+    #btn-mobile::after{
+        content:"";
+        position: absolute;
+        top: 30%;
+        left: 5%;
+        width: 70%;
+        height: 10%;
+        background-color: #ffffff;
+        border-radius: 20px;
+        transition: 1s ease;
+    }
+    #btn-mobile::before{
+        content:"";
+        position: absolute;
+        top: 60%;
+        left: 33%;
+        width: 40%;
+        height: 10%;
+        background-color: #ffffff;
+        border-radius: 20px;
+        transition: 1s ease;
+    }
+    #btn-mobile:checked ~ label .btn-mobile:after{
+        transform: rotate(225deg);
+        top: 45%;
+        left: 15%;
+    }
+    #btn-mobile:checked ~ label .btn-mobile:before{
+        transform: rotate(-405deg);
+        top: 45%;
+        left: 15%;
+        width: 70%;
+        height: 10%;
     }
 }

@@ -6,10 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login System</title>
 
-    <!--css imports-->
+    <!--========CSS imports===========-->
     <link rel="stylesheet" href="assets/src/css/reset.css" />
     <link rel="stylesheet" href="assets/src/css/login.css" />
     <link rel="stylesheet" href="assets/src/css/style.css" />
+
+    <!--========JS imports===========-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   </head>
   <body>
     <section class="login-area">
@@ -29,14 +32,14 @@
 
       <div class="main-login">
         <div class="left-login">
-          <h1>
+          <h1 data-aos="fade-down" data-aos-duration="800">
             <div class="left-login-title">Faça login</div>
             e tenha sua casa em suas mãos
           </h1>
-          <img class="house" src="assets/src/svg/loginIcon.svg" />
+          <img class="house" src="assets/src/svg/loginIcon.svg" data-aos="fade-right" data-aos-duration="800"/>
         </div>
 
-        <form method="POST">
+        <form method="POST" data-aos="fade-left" data-aos-duration="800">
           <div class="right-login">
             <div class="card-login">
               <div class="state-login">
@@ -69,5 +72,10 @@
         </form>
       </div>
     </section>
+    < !--Import das animações do scrool-- >
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>

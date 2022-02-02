@@ -6,22 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Smart House</title>
 
-    <!--html imports-->
+    <!--========Html imports===========-->
     <link rel="html" href="login.html" type="text/">
 
-    <!--css imports-->
+    <!--========CSS imports===========-->
     <link rel="stylesheet" href="assets/src/css/reset.css" />
     <link rel="stylesheet" href="assets/src/css/style.css" />
 
-    <!--js imports-->
-    <script src="assets/src/js/menu.js" defer></script>
+    <!--========JS imports===========-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   </head>
   
   <body>
     <header class="menu">
         <nav class="navBar" id="nav">
-            <a href="">Logo</a>
-            <button id="btn-mobile">Menu</button>
+            <input id="btn-mobile" type="checkbox" style="display: none"/>
+            <label for="btn-mobile">
+              <div class="btn-mobile" id="btn-mobile"></div>
+            </label>
             <ul>
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="#about">Sobre</a></li>
@@ -30,29 +32,34 @@
                 <li><a href="login.html">Painel</a></li>
             </ul>
         </nav>
-
+    </header>
+    
         <section class="conteudo-header">
           <div class="container-esquerdo">
-              <h1 class="titulo-container-esquerdo">Smart House</h1>
-              <h2 class="subtitulo-container-esquerdo">o futuro em suas mãos</h2>
+              <h1 class="titulo-container-esquerdo" data-aos="fade-down" data-aos-duration="800">Smart House</h1>
+              <h2 class="subtitulo-container-esquerdo" data-aos="fade-down" data-aos-duration="800">o futuro em suas mãos</h2>
 
-              <div class="texto-container-esquerdo">
+              <div class="texto-container-esquerdo" data-aos="fade-right" data-aos-duration="800">
                 <p> &emsp; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac est non nulla gravida tempus nec sit amet velit. Cras commodo leo a massa efficitur imperdiet. Morbi non eros vehicula, interdum sapien at, aliquet neque. Mauris eget quam tempor risus imperdiet sollicitudin in sed nisi. Sed posuere a augue at gravida. Etiam suscipit venenatis nibh. Phasellus accumsan vehicula ipsum et viverra. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
               </div>
 
-              <button class="btn-header">Saber mais</button>
+              <button class="btn-header" data-aos="fade-up" data-aos-duration="800">Saber mais</button>
           </div>
 
-          <div class="container-direito">
+          <div class="container-direito" data-aos="fade-left" data-aos-duration="800">
             <img src="assets/src/svg/smartHouse.svg" class="logo-menu">
           </div>
         </section>
-    </header> 
     
-    <section class="sobre" id="about">
+    <section class="sobre" id="about" data-aos="fade-up">
       <h2 class="titulo-sobre-nos">Sobre nós</h2>
       <p class="conteudo-sobre-nos">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident</p>
     </section>
 
+    <!--======== Animações ===========-->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
